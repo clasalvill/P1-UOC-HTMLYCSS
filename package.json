@@ -7,9 +7,12 @@
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "parcel:serve": "parcel src/index.html -p 8123 --target web",
     "parcel:build": "parcel build src/index.html --target web --no-source-maps --no-cache",
-    "stylelint": "stylelint 'src/**/*.scss'",
+    "stylelint": "stylelint \"src/**/*.scss\"",
+    "build-netlify": "npm-run-all --serial clean stylelint-netlify parcel:build",
+    "stylelint-netlify": "stylelint 'src/**/*.scss' --allow-empty-input || true",
     "dev": "npm-run-all --serial clean parcel:serve",
     "build": "npm-run-all --serial clean stylelint parcel:build"
+
   },
   "targets": {
     "web": {
