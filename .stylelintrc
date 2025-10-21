@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "indentation": 2,
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "declaration-block-no-duplicate-properties": true,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": ["/^my-/"]
+      }
+    ]
+  }
+}
